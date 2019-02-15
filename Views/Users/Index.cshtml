@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@if (HttpContext.Current.User.Identity.IsAuthenticated)
+{
+<p>Bienvenido a tu sesion @HttpContext.Current.User.Identity.Name !!!</p>
+}
+else 
+{
+    <p>Todavia no has iniciado sesion</p>
+}
